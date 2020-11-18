@@ -8,7 +8,7 @@ class Transfer
     @sender = sender
     @receiver = receiver
     @amount = amount
-  end 
+  end
 
   def valid?
     sender.valid? && receiver.valid?
@@ -19,9 +19,9 @@ class Transfer
       sender.balnce -= amount
       receiver.balance += amount
       self.status = "complete"
-    else 
+    else
       reject_transfer
     end
   end
-  
+
 end
